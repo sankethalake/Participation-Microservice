@@ -7,6 +7,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using ParticipationMicroservice.DBContexts;
+using ParticipationMicroservice.Model;
+using ParticipationMicroservice.Models.DataManager;
+using ParticipationMicroservice.Models.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +30,7 @@ namespace ParticipationMicroservice
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ParticipationContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:ParticipationDB"]));
+            services.AddScoped<IDataRepository<Participation>, ParticipationManager>();
             services.AddControllers();
         }
 
