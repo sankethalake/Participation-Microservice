@@ -12,8 +12,10 @@ namespace ParticipationMicroservice.Model
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int PlayerId { get; set; }
+
         [ForeignKey("SportId")]
-        public Sport Sports { get; set; }
+        public int SportId { get; set; }
+        public virtual Sport Sports { get; set; }
 
         [Required(ErrorMessage = "Player Name is required")]
         public string PlayerName { get; set; }

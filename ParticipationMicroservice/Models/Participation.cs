@@ -14,14 +14,15 @@ namespace ParticipationMicroservice.Model
         public int ParticipationId { get; set; }
 
         [ForeignKey("EventId")]
-        public Event Events{ get; set; }
+        public int EventId { get; set; }
+        public virtual Event Events{ get; set; }
 
         //Commented due to transitive dependancy
         //[ForeignKey("Sport")]
         //public Sport Sports { get; set; }
 
         [Required(ErrorMessage = "Players/Players are required")]
-        public IList<Player> PlayerName { get; set; }
+        public virtual IList<Player> PlayerName { get; set; }
 
         [Required(ErrorMessage = "Required")]
         [EnumDataType(typeof(ParticipationStatus))]

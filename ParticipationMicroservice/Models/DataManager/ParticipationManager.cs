@@ -1,4 +1,5 @@
-﻿using ParticipationMicroservice.DBContexts;
+﻿using Microsoft.EntityFrameworkCore;
+using ParticipationMicroservice.DBContexts;
 using ParticipationMicroservice.Model;
 using ParticipationMicroservice.Models.Repository;
 using System;
@@ -19,7 +20,9 @@ namespace ParticipationMicroservice.Models.DataManager
         //method to get all participation
         public IEnumerable<Participation> GetAll()
         {
-            return _participationContext.Participations.ToList();
+           var data = _participationContext.Participations.ToList();
+
+            return data;
         }
 
         //method to get participation by id
@@ -32,8 +35,15 @@ namespace ParticipationMicroservice.Models.DataManager
         //method to get participation by status
         public IEnumerable<Participation> GetByStatus(string status)
         {
-            ParticipationStatus enumStatus = (ParticipationStatus)Enum.Parse(typeof(ParticipationStatus), status);
-            return _participationContext.Participations.Where(s => s.Status == enumStatus);
+            IEnumerable<Participation> participantList= null;
+            
+                if (Enum.TryParse(status, true, out ParticipationStatus enumStatus))
+                {
+                    participantList = _participationContext.Participations.Where(s => s.Status == enumStatus);
+                }
+
+    
+            return participantList;
         }
 
 
@@ -45,13 +55,21 @@ namespace ParticipationMicroservice.Models.DataManager
         }
 
         //method to update status of participation
-        public void Update(Participation participation, string status)
+        public bool Update(Participation participation, string status)
         {
-            //participation.Events = entity.Events;
-            //participation.PlayerName = entity.PlayerName;
-            ParticipationStatus enumStatus = (ParticipationStatus)Enum.Parse(typeof(ParticipationStatus), status);
-            participation.Status = enumStatus;
-            _participationContext.SaveChanges();
+            ParticipationStatus enumStatus;
+
+            if (Enum.TryParse(status, true, out enumStatus)){
+                participation.Status = enumStatus;
+                _participationContext.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
+        private bool ValidateStatus(string status)
+        {
+            return Enum.TryParse(status, true, out ParticipationStatus enumStatus);
         }
 
     }

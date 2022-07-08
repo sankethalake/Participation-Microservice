@@ -30,7 +30,6 @@ namespace ParticipationMicroservice.Controllers
         [HttpGet("getPendingParticipations/{status}", Name = "GetByPending")]
         public IActionResult GetByPending(string status)
         {
-
             IEnumerable<Participation> participation = _dataRepository.GetByStatus(status);
             return Ok(participation);
         }
@@ -63,10 +62,7 @@ namespace ParticipationMicroservice.Controllers
                 return BadRequest("Employee is null.");
             }
             _dataRepository.Add(participation);
-            return CreatedAtRoute(
-                  "Get",
-                  new { Id = participation.ParticipationId },
-                  participation);
+            return Ok(participation);
         }
 
 
@@ -75,22 +71,22 @@ namespace ParticipationMicroservice.Controllers
         public IActionResult Put(long id, [FromBody] string status)
         {
             Participation participationToUpdate = _dataRepository.Get(id);
-            _dataRepository.Update(participationToUpdate, status);
-            return Ok(participationToUpdate);
+            if(!_dataRepository.Update(participationToUpdate, status))
+            {
+                return BadRequest("Select Valid Status");
+            }           
+            return Ok();
 
-            //Participation participationToUpdate = _dataRepository.Get(id);
-            //if (participationToUpdate != null && Enum.IsDefined(typeof(ParticipationStatus), status))
+
+            //if (participationToUpdate != null ))
             //{
             //    _dataRepository.Update(participationToUpdate, status);
             //    return Ok(participationToUpdate);
                 
             //}
-            //if (!Enum.IsDefined(typeof(ParticipationStatus), status)) ;
-            //{
-            //    return BadRequest("Select Valid Status");
-            //}
+ 
             //return NotFound("The Employee record couldn't be found.");
         }
-       
+
     }
 }

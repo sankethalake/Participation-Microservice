@@ -30,7 +30,7 @@ namespace ParticipationMicroservice
         public void ConfigureServices(IServiceCollection services)
         {
             // local db connection string
-            services.AddDbContext<ParticipationContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:ParticipationDB"]));
+            services.AddDbContext<ParticipationContext>(opts => opts.UseLazyLoadingProxies().UseSqlServer(Configuration["ConnectionString:ParticipationDB"]));
 
             services.AddScoped<IDataRepository<Participation>, ParticipationManager>();
             services.AddControllers();

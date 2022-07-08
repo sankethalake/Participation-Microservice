@@ -14,7 +14,8 @@ namespace ParticipationMicroservice.Model
         public int EventId { get; set; }
 
         [ForeignKey("SportId")]
-        public Sport Sports { get; set; }
+        public int SportId { get; set; }
+        public virtual Sport Sports { get; set; }
 
         [Required(ErrorMessage = "Required")]
         public string EventName { get; set; }

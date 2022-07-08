@@ -11,6 +11,6 @@ namespace ParticipationMicroservice.Models.Repository
         TEntity Get(long id);
         IEnumerable<TEntity> GetByStatus(string status);
         void Add(TEntity entity);
-        void Update(TEntity dbEntity, string status);
+        bool Update(TEntity dbEntity, string status);
     }
 }

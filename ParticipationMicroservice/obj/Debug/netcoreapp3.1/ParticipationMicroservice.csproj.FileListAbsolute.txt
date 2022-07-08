@@ -143,3 +143,5 @@ F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreap
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\obj\Debug\netcoreapp3.1\ParticipationMicroservice.MvcApplicationPartsAssemblyInfo.cs
+F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\Castle.Core.dll
+F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll

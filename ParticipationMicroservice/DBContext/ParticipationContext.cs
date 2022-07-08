@@ -12,6 +12,7 @@ namespace ParticipationMicroservice.DBContexts
         public ParticipationContext(DbContextOptions<ParticipationContext> options) : base(options)
         {
         }
+
         public DbSet<Sport> Sports { get; set; }
         public DbSet<Event> Events { get; set; }
         public DbSet<Player> Players { get; set; }
