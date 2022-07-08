@@ -138,3 +138,8 @@ F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreap
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\MFPE\Participation-Microservice\ParticipationMicroservice\obj\Debug\netcoreapp3.1\ParticipationMicroservice.MvcApplicationPartsAssemblyInfo.cs

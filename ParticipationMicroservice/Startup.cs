@@ -29,9 +29,13 @@ namespace ParticipationMicroservice
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // local db connection string
             services.AddDbContext<ParticipationContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:ParticipationDB"]));
+
             services.AddScoped<IDataRepository<Participation>, ParticipationManager>();
             services.AddControllers();
+
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +46,14 @@ namespace ParticipationMicroservice
                 app.UseDeveloperExceptionPage();
             }
 
+            // This middleware serves generated Swagger document as a JSON endpoint
+            app.UseSwagger();
+
+            // This middleware serves the Swagger documentation UI
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Employee API V1");
+            });
             app.UseRouting();
 
             app.UseAuthorization();

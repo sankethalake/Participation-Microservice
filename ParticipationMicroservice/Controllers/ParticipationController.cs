@@ -25,17 +25,35 @@ namespace ParticipationMicroservice.Controllers
             IEnumerable<Participation> participation = _dataRepository.GetAll();
             return Ok(participation);
         }
-        // GET: api/Participation/5
-        [HttpGet("{id}", Name = "Get")]
-        public IActionResult Get(long id)
+
+        // GET: api/Participation/getPendingParticipations
+        [HttpGet("getPendingParticipations/{status}", Name = "GetByPending")]
+        public IActionResult GetByPending(string status)
         {
-            Participation participation = _dataRepository.Get(id);
-            if (participation == null)
-            {
-                return NotFound("The Employee record couldn't be found.");
-            }
+
+            IEnumerable<Participation> participation = _dataRepository.GetByStatus(status);
             return Ok(participation);
         }
+
+        // GET: api/Participation/getApprovedParticipations 
+        [HttpGet("getApprovedParticipations/{status}", Name = "GetByApproved")]
+        public IActionResult GetByApproved(string status)
+        {
+
+            IEnumerable<Participation> participation = _dataRepository.GetByStatus(status);
+            return Ok(participation);
+        }
+
+        // GET: api/Participation/GetByDeclined 
+        [HttpGet("getDeclinedParticipations/{status}", Name = "GetByDeclined")]
+        public IActionResult GetByDeclined(string status)
+        {
+
+            IEnumerable<Participation> participation = _dataRepository.GetByStatus(status);
+            return Ok(participation);
+        }
+
+
         // POST: api/Participation
         [HttpPost]
         public IActionResult Post([FromBody] Participation participation)
@@ -51,23 +69,27 @@ namespace ParticipationMicroservice.Controllers
                   participation);
         }
 
+
         // PUT: api/Participation/5
         [HttpPut("{id}")]
         public IActionResult Put(long id, [FromBody] string status)
         {
-            
             Participation participationToUpdate = _dataRepository.Get(id);
-            if (participationToUpdate != null && Enum.IsDefined(typeof(ParticipationStatus), status))
-            {
-                _dataRepository.Update(participationToUpdate, status);
-                return Ok(participationToUpdate);
+            _dataRepository.Update(participationToUpdate, status);
+            return Ok(participationToUpdate);
+
+            //Participation participationToUpdate = _dataRepository.Get(id);
+            //if (participationToUpdate != null && Enum.IsDefined(typeof(ParticipationStatus), status))
+            //{
+            //    _dataRepository.Update(participationToUpdate, status);
+            //    return Ok(participationToUpdate);
                 
-            }
-            if (!Enum.IsDefined(typeof(ParticipationStatus), status)) ;
-            {
-                return BadRequest("Select Valid Status");
-            }
-            return NotFound("The Employee record couldn't be found.");
+            //}
+            //if (!Enum.IsDefined(typeof(ParticipationStatus), status)) ;
+            //{
+            //    return BadRequest("Select Valid Status");
+            //}
+            //return NotFound("The Employee record couldn't be found.");
         }
        
     }

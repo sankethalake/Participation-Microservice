@@ -21,11 +21,21 @@ namespace ParticipationMicroservice.Models.DataManager
         {
             return _participationContext.Participations.ToList();
         }
+
+        //method to get participation by id
         public Participation Get(long id)
         {
             return _participationContext.Participations
                   .FirstOrDefault(p => p.ParticipationId == id);
         }
+
+        //method to get participation by status
+        public IEnumerable<Participation> GetByStatus(string status)
+        {
+            ParticipationStatus enumStatus = (ParticipationStatus)Enum.Parse(typeof(ParticipationStatus), status);
+            return _participationContext.Participations.Where(s => s.Status == enumStatus);
+        }
+
 
         //method to add participation
         public void Add(Participation entity)
@@ -44,10 +54,5 @@ namespace ParticipationMicroservice.Models.DataManager
             _participationContext.SaveChanges();
         }
 
-        public IEnumerable<Participation> GetByStatus(string status)
-        {
-            ParticipationStatus enumStatus = (ParticipationStatus)Enum.Parse(typeof(ParticipationStatus), status);
-            return _participationContext.Participations.Where(s => s.Status == enumStatus);
-        }
     }
 }
