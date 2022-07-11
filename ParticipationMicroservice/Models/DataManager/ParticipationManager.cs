@@ -48,10 +48,25 @@ namespace ParticipationMicroservice.Models.DataManager
 
 
         //method to add participation
-        public void Add(Participation entity)
+        public bool Add(Participation entity)
         {
-            _participationContext.Participations.Add(entity);
-            _participationContext.SaveChanges();
+            bool flag = false;
+            if (Get(entity.ParticipationId) != null)
+            {
+                return flag;
+            }
+            try
+            {
+                _participationContext.Participations.Add(entity);
+                _participationContext.SaveChanges();
+                flag = true;
+            }
+            catch(Microsoft.EntityFrameworkCore.DbUpdateException e)
+            {
+                
+            }
+
+            return flag;
         }
 
         //method to update status of participation

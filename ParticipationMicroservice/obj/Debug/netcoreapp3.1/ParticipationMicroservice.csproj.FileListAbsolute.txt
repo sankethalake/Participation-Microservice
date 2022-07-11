@@ -19,8 +19,6 @@ F:\MFPE\Participation-Microservice\ParticipationMicroservice\obj\Debug\netcoreap
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\obj\Debug\netcoreapp3.1\ParticipationMicroservice.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\obj\Debug\netcoreapp3.1\ParticipationMicroservice.pdb
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\obj\Debug\netcoreapp3.1\ParticipationMicroservice.genruntimeconfig.cache
-F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
-F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\EntityFramework.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -47,10 +45,8 @@ F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreap
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\System.CodeDom.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
-F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
@@ -60,8 +56,6 @@ F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreap
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
-F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
@@ -145,3 +139,6 @@ F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreap
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\obj\Debug\netcoreapp3.1\ParticipationMicroservice.MvcApplicationPartsAssemblyInfo.cs
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\Castle.Core.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
+F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\log4net.config
+F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\log4net.dll
+F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll

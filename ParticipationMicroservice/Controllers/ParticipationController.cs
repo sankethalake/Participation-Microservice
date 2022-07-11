@@ -5,6 +5,7 @@ using ParticipationMicroservice.Models.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace ParticipationMicroservice.Controllers
@@ -14,6 +15,7 @@ namespace ParticipationMicroservice.Controllers
     public class ParticipationController : ControllerBase
     {
         private readonly IDataRepository<Participation> _dataRepository;
+        static readonly log4net.ILog _logger = log4net.LogManager.GetLogger(typeof(ParticipationController));
         public ParticipationController(IDataRepository<Participation> dataRepository)
         {
             _dataRepository = dataRepository;
@@ -57,12 +59,15 @@ namespace ParticipationMicroservice.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] Participation participation)
         {
+            // validates participation object
             if (participation == null)
             {
-                return BadRequest("Employee is null.");
+                _logger.Warn("Invalid Participation object tried to create");
+                return BadRequest("Employee is null.");               
             }
-            _dataRepository.Add(participation);
-            return Ok(participation);
+            if(_dataRepository.Add(participation)) return Ok(participation);
+            _logger.Warn("Participation Object is already present");
+            return BadRequest("SQL EXCEPTION: (Hint)Participation Object is already present");
         }
 
 
@@ -71,21 +76,21 @@ namespace ParticipationMicroservice.Controllers
         public IActionResult Put(long id, [FromBody] string status)
         {
             Participation participationToUpdate = _dataRepository.Get(id);
+
+            // checks participationToUpdate is valid Participation object or not
+            if (participationToUpdate == null)
+            {
+                _logger.Warn("Participation to be changed not found");
+                return NotFound("Participation not found");
+            }
+
+            //validates status
             if(!_dataRepository.Update(participationToUpdate, status))
             {
+                _logger.Warn("Invalid status in the request");
                 return BadRequest("Select Valid Status");
             }           
-            return Ok();
-
-
-            //if (participationToUpdate != null ))
-            //{
-            //    _dataRepository.Update(participationToUpdate, status);
-            //    return Ok(participationToUpdate);
-                
-            //}
- 
-            //return NotFound("The Employee record couldn't be found.");
+            return Ok(status+" successfully");     
         }
 
     }

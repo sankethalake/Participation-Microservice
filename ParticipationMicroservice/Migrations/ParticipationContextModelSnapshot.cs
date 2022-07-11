@@ -36,7 +36,7 @@ namespace ParticipationMicroservice.Migrations
                     b.Property<int>("NoOfSlots")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SportId")
+                    b.Property<int>("SportId")
                         .HasColumnType("int");
 
                     b.HasKey("EventId");
@@ -93,7 +93,7 @@ namespace ParticipationMicroservice.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("SportId")
+                    b.Property<int>("SportId")
                         .HasColumnType("int");
 
                     b.HasKey("PlayerId");
@@ -132,7 +132,9 @@ namespace ParticipationMicroservice.Migrations
                 {
                     b.HasOne("ParticipationMicroservice.Model.Sport", "Sports")
                         .WithMany()
-                        .HasForeignKey("SportId");
+                        .HasForeignKey("SportId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ParticipationMicroservice.Model.Participation", b =>
@@ -152,7 +154,9 @@ namespace ParticipationMicroservice.Migrations
 
                     b.HasOne("ParticipationMicroservice.Model.Sport", "Sports")
                         .WithMany()
-                        .HasForeignKey("SportId");
+                        .HasForeignKey("SportId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

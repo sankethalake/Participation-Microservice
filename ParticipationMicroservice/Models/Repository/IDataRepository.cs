@@ -10,7 +10,7 @@ namespace ParticipationMicroservice.Models.Repository
         IEnumerable<TEntity> GetAll();
         TEntity Get(long id);
         IEnumerable<TEntity> GetByStatus(string status);
-        void Add(TEntity entity);
+        bool Add(TEntity entity);
         bool Update(TEntity dbEntity, string status);
     }
 }
