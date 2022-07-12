@@ -12,6 +12,7 @@ namespace ParticipationMicroservice.Models.DataManager
     public class ParticipationManager: IDataRepository<Participation>
     {
         readonly ParticipationContext _participationContext;
+        static readonly log4net.ILog _logger = log4net.LogManager.GetLogger(typeof(ParticipationManager));
         public ParticipationManager(ParticipationContext context)
         {
             _participationContext = context;
@@ -63,7 +64,7 @@ namespace ParticipationMicroservice.Models.DataManager
             }
             catch(Microsoft.EntityFrameworkCore.DbUpdateException e)
             {
-                
+                _logger.Error(e.Message);
             }
 
             return flag;
@@ -72,9 +73,7 @@ namespace ParticipationMicroservice.Models.DataManager
         //method to update status of participation
         public bool Update(Participation participation, string status)
         {
-            ParticipationStatus enumStatus;
-
-            if (Enum.TryParse(status, true, out enumStatus)){
+            if (Enum.TryParse(status, true, out ParticipationStatus enumStatus)){
                 participation.Status = enumStatus;
                 _participationContext.SaveChanges();
                 return true;
@@ -82,10 +81,7 @@ namespace ParticipationMicroservice.Models.DataManager
             return false;
         }
 
-        private bool ValidateStatus(string status)
-        {
-            return Enum.TryParse(status, true, out ParticipationStatus enumStatus);
-        }
+
 
     }
 }

@@ -22,7 +22,7 @@ namespace ParticipationMicroservice.Model
         //public Sport Sports { get; set; }
 
         [Required(ErrorMessage = "Players/Players are required")]
-        public virtual IList<Player> PlayerName { get; set; }
+        public virtual IList<Player> Player { get; set; }
 
         [Required(ErrorMessage = "Required")]
         [EnumDataType(typeof(ParticipationStatus))]

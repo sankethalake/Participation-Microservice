@@ -32,6 +32,10 @@ namespace ParticipationMicroservice.Controllers
         [HttpGet("getPendingParticipations/{status}", Name = "GetByPending")]
         public IActionResult GetByPending(string status)
         {
+            if(!status.ToLower().Equals("pending"))
+            {
+                return BadRequest("Enter valid status");
+            }
             IEnumerable<Participation> participation = _dataRepository.GetByStatus(status);
             return Ok(participation);
         }
@@ -40,7 +44,10 @@ namespace ParticipationMicroservice.Controllers
         [HttpGet("getApprovedParticipations/{status}", Name = "GetByApproved")]
         public IActionResult GetByApproved(string status)
         {
-
+            if (!status.ToLower().Equals("approved"))
+            {
+                return BadRequest("Enter valid status");
+            }
             IEnumerable<Participation> participation = _dataRepository.GetByStatus(status);
             return Ok(participation);
         }
@@ -49,7 +56,10 @@ namespace ParticipationMicroservice.Controllers
         [HttpGet("getDeclinedParticipations/{status}", Name = "GetByDeclined")]
         public IActionResult GetByDeclined(string status)
         {
-
+            if (!status.ToLower().Equals("declined"))
+            {
+                return BadRequest("Enter valid status");
+            }
             IEnumerable<Participation> participation = _dataRepository.GetByStatus(status);
             return Ok(participation);
         }
