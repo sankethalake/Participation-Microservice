@@ -77,7 +77,7 @@ namespace ParticipationMicroservice.Controllers
             }
             if(_dataRepository.Add(participation)) return Ok(participation);
             _logger.Warn("Participation Object is already present");
-            return BadRequest("SQL EXCEPTION: (Hint)Participation Object is already present");
+            return BadRequest("SQL EXCEPTION: (Hint)Object is already present");
         }
 
 

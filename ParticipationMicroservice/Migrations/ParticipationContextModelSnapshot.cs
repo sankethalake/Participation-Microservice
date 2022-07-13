@@ -149,7 +149,7 @@ namespace ParticipationMicroservice.Migrations
             modelBuilder.Entity("ParticipationMicroservice.Model.Player", b =>
                 {
                     b.HasOne("ParticipationMicroservice.Model.Participation", null)
-                        .WithMany("PlayerName")
+                        .WithMany("Player")
                         .HasForeignKey("ParticipationId");
 
                     b.HasOne("ParticipationMicroservice.Model.Sport", "Sports")

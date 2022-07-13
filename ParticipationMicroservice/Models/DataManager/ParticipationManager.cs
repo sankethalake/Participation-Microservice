@@ -57,12 +57,44 @@ namespace ParticipationMicroservice.Models.DataManager
                 return flag;
             }
             try
-            {
+            {   
+                //checks whether the object is present or not
+                _participationContext.Entry(entity).State = EntityState.Detached;
+                var existingEvent = _participationContext.Events.Local.SingleOrDefault(e => e.EventId == entity.Events.EventId);
+                if (existingEvent != null)
+                {
+                    entity.Events = existingEvent;
+                    _participationContext.Entry(existingEvent).State = EntityState.Detached;
+                }
+                _participationContext.Attach(entity);
+                
+                //for (int iter = 0; iter < entity.Player.Count; iter++)
+                //{
+                //    _participationContext.Entry(entity).State = EntityState.Detached;
+                //    //_participationContext.Entry(entity.Player).State = EntityState.Detached;
+                //    Player player = entity.Player.ElementAt(iter);
+                //    //_participationContext.Entry(entity.Player.ElementAt(iter)).State = EntityState.Detached;
+                //    var existingSports = _participationContext.Sports.Local.SingleOrDefault(e => e.SportId == player.Sports.SportId);
+                //    if (existingSports != null)
+                //    {
+                //        entity.Player.ElementAt(iter).Sports = existingSports;
+                //        _participationContext.Entry(existingSports).State = EntityState.Detached;
+                //    }
+                //    //_participationContext.Attach(entity.Player.ElementAt(iter));
+                //    _participationContext.Attach(entity);
+                //}
+
+
+                //_participationContext.Entry(entity).State = EntityState.Modified;
                 _participationContext.Participations.Add(entity);
                 _participationContext.SaveChanges();
                 flag = true;
             }
             catch(Microsoft.EntityFrameworkCore.DbUpdateException e)
+            {
+                _logger.Error(e.Message);
+            }
+            catch (System.InvalidOperationException e)
             {
                 _logger.Error(e.Message);
             }

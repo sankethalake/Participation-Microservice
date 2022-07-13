@@ -142,3 +142,4 @@ F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreap
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\log4net.config
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\log4net.dll
 F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+F:\MFPE\Participation-Microservice\ParticipationMicroservice\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll

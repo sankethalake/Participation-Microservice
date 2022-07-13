@@ -10,7 +10,7 @@ using ParticipationMicroservice.DBContexts;
 namespace ParticipationMicroservice.Migrations
 {
     [DbContext(typeof(ParticipationContext))]
-    [Migration("20220710053020_Initial_Migration")]
+    [Migration("20220712121134_Initial_Migration")]
     partial class Initial_Migration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -151,7 +151,7 @@ namespace ParticipationMicroservice.Migrations
             modelBuilder.Entity("ParticipationMicroservice.Model.Player", b =>
                 {
                     b.HasOne("ParticipationMicroservice.Model.Participation", null)
-                        .WithMany("PlayerName")
+                        .WithMany("Player")
                         .HasForeignKey("ParticipationId");
 
                     b.HasOne("ParticipationMicroservice.Model.Sport", "Sports")
