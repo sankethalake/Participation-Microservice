@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3I30bD2Q636WiladUCF1DnNZOXoV8kNjkLashlqp2cwlVUgsIR+S3hkGLI18RNqj1d+eREyKYI5DrjcGhA5IGQ==",
+  "dgSpecHash": "WJ+Y0ZKujURMSV3KcdR8jxSRuU2YwmfDSxDIwRR7hJ1oRyGbTmcxYyDHgUYRixZCGvA08NjWP0q9kJ44kxcSbw==",
   "success": true,
-  "projectFilePath": "F:\\MFPE\\Participation-Microservice\\ParticipationTest\\ParticipationTest.csproj",
+  "projectFilePath": "F:\\Participation-Microservice\\ParticipationTest\\ParticipationTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sanke\\.nuget\\packages\\castle.core\\5.0.0\\castle.core.5.0.0.nupkg.sha512",
     "C:\\Users\\sanke\\.nuget\\packages\\log4net\\2.0.13\\log4net.2.0.13.nupkg.sha512",
