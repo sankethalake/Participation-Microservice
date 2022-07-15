@@ -8795,11 +8795,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Participation-Microservice\\ParticipationTest\\ParticipationTest.csproj",
+      "projectUniqueName": "F:\\MFPE\\new_participation\\Participation-Microservice\\ParticipationTest\\ParticipationTest.csproj",
       "projectName": "ParticipationTest",
-      "projectPath": "F:\\Participation-Microservice\\ParticipationTest\\ParticipationTest.csproj",
+      "projectPath": "F:\\MFPE\\new_participation\\Participation-Microservice\\ParticipationTest\\ParticipationTest.csproj",
       "packagesPath": "C:\\Users\\sanke\\.nuget\\packages\\",
-      "outputPath": "F:\\Participation-Microservice\\ParticipationTest\\obj\\",
+      "outputPath": "F:\\MFPE\\new_participation\\Participation-Microservice\\ParticipationTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sanke\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8816,8 +8816,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "F:\\Participation-Microservice\\ParticipationMicroservice\\ParticipationMicroservice.csproj": {
-              "projectPath": "F:\\Participation-Microservice\\ParticipationMicroservice\\ParticipationMicroservice.csproj"
+            "F:\\MFPE\\new_participation\\Participation-Microservice\\ParticipationMicroservice\\ParticipationMicroservice.csproj": {
+              "projectPath": "F:\\MFPE\\new_participation\\Participation-Microservice\\ParticipationMicroservice\\ParticipationMicroservice.csproj"
             }
           }
         }

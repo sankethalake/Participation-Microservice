@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "swagger/index.html",
+      "launchUrl": "api/Participation",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,7 +20,7 @@
     "ParticipationMicroservice": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "swagger/index.html",
+      "launchUrl": "api/Participation",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
@@ -29,7 +29,7 @@
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger/index.html",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/Participation",
       "publishAllPorts": true
     }
   }

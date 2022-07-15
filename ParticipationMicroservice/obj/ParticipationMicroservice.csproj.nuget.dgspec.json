@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Participation-Microservice\\ParticipationMicroservice\\ParticipationMicroservice.csproj": {}
+    "F:\\MFPE\\new_participation\\Participation-Microservice\\ParticipationMicroservice\\ParticipationMicroservice.csproj": {}
   },
   "projects": {
-    "F:\\Participation-Microservice\\ParticipationMicroservice\\ParticipationMicroservice.csproj": {
+    "F:\\MFPE\\new_participation\\Participation-Microservice\\ParticipationMicroservice\\ParticipationMicroservice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Participation-Microservice\\ParticipationMicroservice\\ParticipationMicroservice.csproj",
+        "projectUniqueName": "F:\\MFPE\\new_participation\\Participation-Microservice\\ParticipationMicroservice\\ParticipationMicroservice.csproj",
         "projectName": "ParticipationMicroservice",
-        "projectPath": "F:\\Participation-Microservice\\ParticipationMicroservice\\ParticipationMicroservice.csproj",
+        "projectPath": "F:\\MFPE\\new_participation\\Participation-Microservice\\ParticipationMicroservice\\ParticipationMicroservice.csproj",
         "packagesPath": "C:\\Users\\sanke\\.nuget\\packages\\",
-        "outputPath": "F:\\Participation-Microservice\\ParticipationMicroservice\\obj\\",
+        "outputPath": "F:\\MFPE\\new_participation\\Participation-Microservice\\ParticipationMicroservice\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sanke\\AppData\\Roaming\\NuGet\\NuGet.Config",
